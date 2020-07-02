@@ -372,6 +372,5 @@ class TestFileStorageMethods(StorageTests, BaseTestCase):
         for i in range(nthreads * ntasks):
             self.assertEqual(in_q.get(), out_q.get())
 
-    @unittest.skipIf(TRAVIS, 'skipping test that is flaky on travis-ci')
     def test_consumer_integration(self):
         return super(TestFileStorageMethods, self).test_consumer_integration()
